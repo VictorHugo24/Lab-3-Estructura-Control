@@ -17,6 +17,7 @@ public class Rodriguez_Victor_Estructura {
        Scanner lea = new Scanner(System.in);
         lea.useDelimiter("\n");
         int op = 0, op1=0, op2=0, op3=0, op4=0;
+        int contadorNumeroPerfecto = 0;
         
         do {
             System.out.println("****MENU****");
@@ -61,7 +62,7 @@ public class Rodriguez_Victor_Estructura {
                         
                         cont++;
                     }
-                    System.out.println("La palabra más larga es: " + palabraMayor + " con " + maxLength + " caracteres");
+                    System.out.println("La palabra mas larga es: " + palabraMayor + " con " + maxLength + " caracteres");
 
                     String palabraLower = palabraMayor.toLowerCase();
                     String palabraInvertida = "";
@@ -81,6 +82,14 @@ public class Rodriguez_Victor_Estructura {
                     break; 
 
               case 2:
+                   System.out.print("Ingrese un numero: ");
+                int numero = lea.nextInt();
+                int sumaDivisores = 0; 
+                for (int i = 1; i < numero; i++) {
+                    if (numero % i == 0) sumaDivisores += i;
+                }
+                System.out.println(numero + (sumaDivisores == numero ? " es un número perfecto." : " no es un número perfecto."));
+                contadorNumeroPerfecto++;
                   op2++;
                   break;
               case 3:
